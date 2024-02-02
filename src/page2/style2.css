@@ -6,19 +6,67 @@
     
 }
 
-.navbar{
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: #05445E;
-    color:ivory;
-    display: flexbox;
-    text-align: center;
-   
-    
+    /* padding: 30px; */
+    color: ivory;
+
     
 }
+.ele{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    /* padding: auto; */
+    gap:30px;
+    align-items: center;
+    justify-items: center;
+
+}
+.ele div a{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.dashboard {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    padding-right: 30%;
+    
+}
+.dashboard button {
+    background-color: #05445E;
+    color: ivory;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-right: 30%; */
+}
+.dashboard span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: ivory;
+    display: flex;
+    align-items: center;
+}
+
+
 #icon{
     padding: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
+    color:ivory;
 }
 
 #icon:hover{
@@ -27,32 +75,47 @@
     border-radius: 50% 50% ;
 
 }
-.question_img{
-    height: 50px;
-    width: 50px;
-}
-.question_box1{
+
+.main1{
     background-color: ivory;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    /* padding: 25px; */
-  
+    height: 100vh;
+    padding: 3%;
 }
 .question_box{
+    
     border: 3px black solid;
+    display: flex;
     border-radius: 40px;
     color: ivory;
     text-align: center;
     background-color: #189AB4;
     margin: auto;
     width:fit-content;
-    /* display: block; */
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
     padding-right: 25px;
-
+    text-align: center;
 }
+
+.question_box span{
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#para{
+    display: flex;
+   text-align: center;
+   align-items: center;
+   font-size: 2rem;
+   margin: 0%;
+   /* text-decoration: none; */
+}
+
+
 /* .out_btn{
     background-color: indianred;
     display: flex;
@@ -84,12 +147,13 @@
 
 #submit_btn{
     align-self: center;
-    background-color: green;
+    background-color: rgb(107, 226, 107);
     border-radius: 10px;
     border: 2px solid black;
     height: 50px;
     width: 100px;
 }
+
 .buttons{
     background-color: ivory;
     height: 300px;
