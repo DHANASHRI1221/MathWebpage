@@ -1,0 +1,148 @@
+
+.quote{
+    text-align: center;
+    background-color: #05445E;
+    color:ivory;
+    
+}
+
+.navbar{
+    background-color: #05445E;
+    color:ivory;
+    display: flexbox;
+    text-align: center;
+    padding: 50px;
+    
+    
+}
+#icon{
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#icon:hover{
+    background-color: ivory;
+    color:#05445E;
+    border-radius: 50% 50% ;
+
+}
+.question_img{
+    height: 50px;
+    width: 50px;
+}
+.question_box1{
+    background-color: ivory;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    /* padding: 25px; */
+  
+}
+.question_box{
+    border: 3px black solid;
+    border-radius: 40px;
+    color: ivory;
+    text-align: center;
+    background-color: #189AB4;
+    margin: auto;
+    width:fit-content;
+    /* display: block; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+/* .out_btn{
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_submit{
+    
+    align-content: center;
+   align-items: center;
+   vertical-align: middle;
+   
+    margin: 25px;
+
+    width: 100%;
+} */
+.out_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust the height based on your design */
+    background-color: ivory;
+}
+
+.btn_submit {
+    text-align: center;
+}
+
+#submit_btn{
+    align-self: center;
+    background-color: green;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+}
+.buttons{
+    background-color: ivory;
+    height: 300px;
+    /* width: 100%; */
+  
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+
+}
+
+#btn{
+    height: 100px;
+    width:250px;
+background-color:#75E6DA;
+ border: 1px solid black;
+
+background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); 
+   /* border: 2px black solid;  */
+   border-radius: 20px;
+    text-align: center;
+    margin: auto;
+  font-size: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+
+}
+
+#btn:hover{
+    box-shadow: 0 10px 15px rgba(7, 21, 216, 0.4);}
+
+/* .button1 {
+display: inline-block;
+   height: 125px;
+  width:250px;  
+  border: 3px black solid;  
+  margin: 20px;
+  padding-top: 20px;
+  padding-left: 22px;
+  padding-bottom: 50px;
+background-color:
+#75E6DA;
+
+
+} */
+
+
+
+
+ 
+
+
+
+
+

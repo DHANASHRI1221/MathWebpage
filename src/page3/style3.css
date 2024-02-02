@@ -1,0 +1,97 @@
+
+.quote{
+    text-align: center;
+    background-color: #05445E;
+    color:ivory;
+    
+}
+
+.navbar{
+    background-color: #05445E;
+    color:ivory;
+    display: flexbox;
+    text-align: center;
+    padding: 50px;
+    
+    
+}
+#icon{
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#icon:hover{
+    background-color: ivory;
+    color:#05445E;
+    border-radius: 50% 50% ;
+
+}
+.question_img{
+    height: 50px;
+    width: 50px;
+}
+
+.question_box1{
+    background-color: ivory;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    /* padding: 25px; */
+  
+}
+.question_box{
+    border: 3px black solid;
+    border-radius: 40px;
+    color: ivory;
+    text-align: center;
+    background-color: #189AB4;
+    margin: auto;
+    width:fit-content;
+    /* display: block; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+.pair{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-flex;
+    /* width: 25%; */
+    width: 400px;
+    height: 75px;
+    background-color: #189AB4;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 200px;
+  
+   cursor: pointer;
+    margin-right: 100px;
+}
+.pair:hover{
+    background-color: #08719e;
+}
+/* ... (Your existing styles) ... */
+
+/* Style for the canvas */
+#lineCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Make the canvas transparent to mouse events */
+}
+
+
+
+
+
+ 
+
+
+
+
+
