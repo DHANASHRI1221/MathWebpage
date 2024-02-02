@@ -16,7 +16,7 @@
 .navbar{
     background-color: #05445E;
     color:ivory;
-    display: flexbox;
+    display: flex;
     text-align: center;
     padding: 50px;
     
