@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .body{
     background-color: #1bebd9;
 }
@@ -5,27 +10,113 @@
     text-align: center;
     background-color: #05445E;
     color:ivory;
+    width: auto;
     
 }
-/* 
-#box {
+
+
+.navbar {
     display: flex;
-    justify-content: center;
+    width: 100vw;
+    justify-content: space-evenly;
     align-items: center;
-} */
-.navbar{
     background-color: #05445E;
-    color:ivory;
-    display: flex;
-    text-align: center;
+    /* padding: 30px; */
+    color: ivory;
 
     
+}
+
+.ele{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    /* padding: auto; */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+
+}
+.ele div a{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.dashboard {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    padding-right: 30vw;
+    margin-right: 30vw;
     
 }
+
+@media (max-width: 700px) {
+    .ele{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    /* padding: auto; */
+    gap: 0.4em;
+    align-items: center;
+    justify-items: center;
+    /* margin: auto; */
+    /* margin-right: 0.1vw; */
+
+}
+.ele div a{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.dashboard {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding-right: 10vw;   
+}
+.dashboard button {
+    background-color: #05445E;
+    color: ivory;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10vw;
+}
+}
+
+
+.dashboard button {
+    background-color: #05445E;
+    color: ivory;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-right: 30%; */
+}
+.dashboard span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: ivory;
+    display: flex;
+    align-items: center;
+}
+
+
 #icon{
     padding: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
+    color:ivory;
 }
 
 #icon:hover{
@@ -74,7 +165,7 @@
 }
 #submit_btn{
     align-self: center;
-    background-color: green;
+    background-color: rgb(107, 226, 107);
     border-radius: 10px;
     border: 2px solid black;
     height: 50px;
@@ -141,18 +232,18 @@ margin-right: 20px;
   
     width: 200px;
     font-weight: 600;
-    background-color: #75E6DA;
+    background-color: ivory;
 }
 #list1 input:hover{
     display: -webkit-inline-flex;
     text-align: center;
     cursor:text;
     font-weight: 600;
-    background-color: rgb(126, 240, 126);
+    background-color:white;
 }
 #list1:hover{
     border:3px;
-    background-color:#14c2b1; 
+    /* background-color:#14c2b1;  */
 }
 
 .list{
@@ -160,10 +251,10 @@ margin-right: 20px;
     text-align: center;
     font-weight: 600;
     font-size: 25px;
- padding-top: 25px;
- padding-left: 25px;
- width: 100%;
- height: 300px;
+    padding-top: 25px;
+    padding-left: 25px;
+    width: 100%;
+    height: 300px;
 }
 
 
