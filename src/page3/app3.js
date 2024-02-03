@@ -1,73 +1,92 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const canvas = document.getElementById('lineCanvas');
-    const ctx = canvas.getContext('2d');
-    let isDrawing = false;
-    let startBox = null;
+// app3.js
 
-    // Set canvas size to match the window
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+let selectedDivs = [];
+let box1;
+let box2;
 
-    // Coordinates of div elements
-    const box1 = document.getElementById('box1');
-    const box2 = document.getElementById('box2');
-    const box3 = document.getElementById('box3');
+function generateRandomColor() {
+    // Generate random values for red, green, and blue components
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
 
-    // Function to draw a line between two div elements
-    function drawLine(start, end) {
-        const rect1 = start.getBoundingClientRect();
-        const rect2 = end.getBoundingClientRect();
+    // Create the color string in the format "rgb(red, green, blue)"
+    const color = `rgb(${red}, ${green}, ${blue})`;
 
-        const x1 = rect1.left + rect1.width / 2 + window.scrollX;
-        const y1 = rect1.top + rect1.height / 2 + window.scrollY;
+    return color;
+}
 
-        const x2 = rect2.left + rect2.width / 2 + window.scrollX;
-        const y2 = rect2.top + rect2.height / 2 + window.scrollY;
+function newBox(){
+    let array = Array.from(document.getElementsByClassName("pair1"));
+    array.forEach(box=>{
+        box.addEventListener("click",()=>{
+            return box.id;
+        })
+    })
+}
 
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.stroke();
+function handleButtonClick(boxId) {
+    // const box = document.getElementById(boxId);
+    // let newColor = generateRandomColor();
+    // if (selectedDivs.length < 2) {
+    //     selectedDivs.push(box);
+    //     // box.style.backgroundColor = newColor;
+
+    //     if (selectedDivs.length === 2) {
+    //         drawLineBetweenDivs(selectedDivs[0], selectedDivs[1]);
+    //     }
+    // }
+    // selectedDivs[0].style.backgroundColor=newColor;
+    // selectedDivs[1].style.backgroundColor=newColor;
+    if(box1==undefined){
+        box1 = document.getElementById(boxId);
     }
-
-    // Draw initial lines
-    function drawLines() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        drawLine(box1, box2);
-        drawLine(box2, box3);
+    else if(box2 == undefined){
+        box2 = document.getElementById(boxId);
     }
-
-    // Draw lines on mouseup event
-    function handleMouseUp(event) {
-        const target = event.target;
-        if (isDrawing && target.id.startsWith('box')) {
-            const endBox = document.getElementById(target.id);
-            drawLine(startBox, endBox);
-            isDrawing = false;
-            startBox = null;
-        }
+    
+    if(box1!=undefined && box2!=undefined){
+        let newColor = generateRandomColor();
+        box1.style.backgroundColor = `${newColor}`;
+        box2.style.backgroundColor = `${newColor}`;
+        drawLineBetweenDivs(box1,box2);
+        box1=undefined;
+        box2=undefined;
     }
+}
 
-    // Start drawing on mousedown event
-    function handleMouseDown(event) {
-        const target = event.target;
-        if (target.id.startsWith('box')) {
-            startBox = document.getElementById(target.id);
-            isDrawing = true;
-        }
-    }
 
-    // Event listeners for mouse events
-    canvas.addEventListener('mouseup', handleMouseUp);
-    canvas.addEventListener('mousedown', handleMouseDown);
 
-    // Draw initial lines
-    drawLines();
+function drawLineBetweenDivs(box1, box2) {
+//  let element1=document.getElementById(box1);
+//  let element2=document.getElementById(box2);
+// console.log("hi");
+ let rect1 = box1.getBoundingClientRect();
+ let rect2=box2.getBoundingClientRect();
 
-    // Draw lines when the window is resized
-    window.addEventListener('resize', function () {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        drawLines();
-    });
-});
+    let x_coordinate1=rect1.right;
+    let x_coordinate2=rect2.left;
+    let top1=rect1.top;
+    let top2=rect2.top;
+    let bottom1=rect1.bottom;
+    let bottom2=rect2.bottom;
+    let y_coordinate1=(top1+bottom1)/2;
+    let y_coordinate2=(top2+bottom2)/2;
+  
+    let slope= (y_coordinate2-y_coordinate1)/(x_coordinate2-x_coordinate1);
+    let angle = Math.atan(slope)*(180/Math.PI) + 'deg';
+    let length = Math.sqrt((x_coordinate1 - x_coordinate2)**2 + (y_coordinate1 - y_coordinate2)**2) + 'px';
+
+    let div = document.createElement("div");
+    div.className = "line";
+    div.style.width = `${length}`;
+    div.style.transform = `rotate(${angle})`;
+    div.style.left = `${x_coordinate1}`;
+    div.style.top = `${y_coordinate1}`;
+
+    let sibling = document.getElementsByClassName("pair1_ele")[0];
+    sibling.insertAdjacentElement('afterend',div);
+    
+}
+
+

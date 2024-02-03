@@ -3,22 +3,113 @@
     text-align: center;
     background-color: #05445E;
     color:ivory;
+    width: auto;
     
 }
 
-.navbar{
+
+.navbar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: #05445E;
-    color:ivory;
-    display: flexbox;
-    text-align: center;
-  
-    
+    /* padding: 30px; */
+    color: ivory;
+
     
 }
+
+.ele{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    /* padding: auto; */
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+
+}
+.ele div a{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.dashboard {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    padding-right: 30vw;
+    margin-right: 30vw;
+    
+}
+
+@media (max-width: 700px) {
+    .ele{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    /* padding: auto; */
+    gap: 0.4em;
+    align-items: center;
+    justify-items: center;
+    /* margin: auto; */
+    /* margin-right: 0.1vw; */
+
+}
+.ele div a{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.dashboard {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding-right: 10vw;   
+}
+.dashboard button {
+    background-color: #05445E;
+    color: ivory;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10vw;
+}
+}
+
+
+.dashboard button {
+    background-color: #05445E;
+    color: ivory;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-right: 30%; */
+}
+.dashboard span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: ivory;
+    display: flex;
+    align-items: center;
+}
+
+
 #icon{
     padding: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
+    color:ivory;
 }
 
 #icon:hover{
@@ -27,6 +118,7 @@
     border-radius: 50% 50% ;
 
 }
+
 .question_img{
     height: 50px;
     width: 50px;
@@ -54,37 +146,98 @@
     padding-right: 25px;
 
 }
-.pair{
+.pairs{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    margin: auto;
+    width:100vw;
+    background-color: ivory;
+    /* overflow: hidden; */
+    /* flex-direction: row; */
+}
+
+/* #canvas{
+
+} */
+
+.pair1_ele{
+    display: inline-flex;
+    flex-direction: column;
+    width:25vw;
+    height: 60vh;
+    margin: auto;
+    /* margin-left: 10vw;
+    margin-left: 10vw; */
+
+}
+.pair2_ele{
+    display: inline-flex;
+    flex-direction: column;
+    width:25vw;
+    height: 60vh;
+    margin: auto;
+    /* margin-right: 10vw; */
+
+}
+.pair1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 400;
     display: inline-flex;
     /* width: 25%; */
-    width: 400px;
-    height: 75px;
+    margin: auto;
+    width: 20vw;
+    height: 9vh; 
     background-color: #189AB4;
     border: 2px solid black;
-    margin-top: 20px;
-    margin-left: 200px;
+    /* margin-top: 20px;
+    margin-left: 200px; */
   
    cursor: pointer;
-    margin-right: 100px;
+    /* margin-right: 100px; */
 }
-.pair:hover{
+.pair2{
+    /* margin: 10px; */
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-flex;
+    /* width: 25%; */
+    width: 20vw;
+    height: 9vh; 
+    background-color: #189AB4;
+    border: 2px solid black;
+    /* margin-top: 20px;
+    margin-left: 200px; */
+  
+   cursor: pointer;
+    /* margin-right: 100px; */
+}
+.pair1:hover{
+    background-color: #08719e;
+}
+.pair2:hover{
     background-color: #08719e;
 }
 /* ... (Your existing styles) ... */
 
-/* Style for the canvas */
-#lineCanvas {
+.line{
+    background-color: black;
+    height: 2px;
     position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none; /* Make the canvas transparent to mouse events */
+    /* transform-origin: 0% 0%; */
+    /* width: 400px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 
 
