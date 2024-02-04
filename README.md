@@ -37,4 +37,4 @@ MathFun is an interactive website designed to make math learning enjoyable for c
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your
+  https://github.com/DHANASHRI1221/Math_Webpage.git
