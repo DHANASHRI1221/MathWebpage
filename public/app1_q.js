@@ -1,6 +1,5 @@
 let score1;
 let score2=0;
-let score3=0;
 function changeColor(clickedButton) {
    
     let score=0;
@@ -48,8 +47,7 @@ function submission() {
 function sendDataToServer() {
     let data = {
         score1: `${score1}`,
-        score2: `${score2}`,
-        score3: `${score3}`
+        score2: `${score2}`
         
     };
     

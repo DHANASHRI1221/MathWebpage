@@ -60,9 +60,15 @@ app.get("/", (req, res) => {
 app.get("/logout",(req, res)=>{
   res.render("index_lo.ejs");
 });
-// app.get("/leaderboard",(req, res)=>{
-//   res.render("index_lb.ejs");
-// });
+app.get("/quiz",(req, res)=>{
+  res.render("index1_q.ejs");
+});
+app.get("/quiz1",(req, res)=>{
+  res.render("index2_q.ejs");
+});
+app.get("/quiz2",(req, res)=>{
+  res.render("index3_q.ejs");
+});
 
 
 app.post('/', (req, res) => {
@@ -127,9 +133,9 @@ app.post('/leaderboard', (req, res) => {
   let score_2;
    let {score1}=req.body;
   let {score2}=req.body;
- 
+ let {score3}=req.body;
   
-  total_score+=parseInt(score1)+parseInt(score2);
+  total_score+=parseInt(score1)+parseInt(score2)+parseInt(score3);
   // console.log(total_score);
 
 
@@ -171,7 +177,7 @@ app.post('/leaderboard', (req, res) => {
 
 
 app.get("/leaderboard", (req, res) => {
-  let updateQuery = `UPDATE user SET score = '${total_score}' WHERE username_1 = '${Student_Name}'`;
+  let updateQuery = `UPDATE user SET score_1 = '${total_score}' WHERE username_1 = '${Student_Name}'`;
 
   try {
     connection.query(updateQuery, (err, updateResult) => {
@@ -191,7 +197,7 @@ app.get("/leaderboard", (req, res) => {
        
         // Extract usernames and scores from the leaderboard result
         let topThreeUsers = leaderboardResult.map(row => ({ username: row.username_1, score: row.score_1 }));
-
+         
         // Send the updated score and top three users to the client
         // console.log(leaderboardResult);
         // console.log(topThreeUsers);

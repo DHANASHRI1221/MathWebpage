@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 .body{
@@ -152,14 +153,6 @@
 
 }
 
-#submit_btn{
-    align-self: center;
-    background-color: rgb(107, 226, 107);
-    border-radius: 10px;
-    border: 2px solid black;
-    height: 50px;
-    width: 100px;
-}
 .out_btn {
     display: flex;
     justify-content: center;
@@ -170,6 +163,14 @@
 
 .btn_submit {
     text-align: center;
+}
+#submit_btn{
+    align-self: center;
+    background-color: rgb(107, 226, 107);
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
 }
 /* .question_box{
   
@@ -205,13 +206,14 @@ margin-right: 20px;
     align-items: center;
     text-align: center;
     display: flex;
+    gap:10vw;
     
    
 }
 #list1 >div{
     margin: auto;
 }
-.list_items{
+#list_items{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -221,77 +223,70 @@ margin-right: 20px;
     width: 150px;
     display: flex;
 }
-#list1 img{
-    display: inline-block;
-    margin-left: 170px;
 
-}
 #list1 input{
     text-align: center;
     /* margin-left: 110px; */
   
     width: 200px;
     font-weight: 600;
-    background-color: #75E6DA;
+    background-color:#75E6DA;
 }
 #list1 input:hover{
     display: -webkit-inline-flex;
     text-align: center;
     cursor:text;
     font-weight: 600;
-    background-color: rgb(126, 240, 126);
+    background-color:white;
 }
 #list1:hover{
     border:3px;
-    background-color:#14c2b1; 
+    /* background-color:#14c2b1;  */
 }
 
 .list{
   background-color: ivory; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
     text-align: center;
+    
     font-weight: 600;
     font-size: 25px;
- padding-top: 25px;
- padding-left: 25px;
- width: 100%;
- height: 300px;
+    /* padding-top: 25px; */
+    /* padding-left: 25px; */
+    width: 100%;
+    /* height: 300px; */
+        height: 45vh;
 }
-#new{
-    height:200px;
-    border: 2px solid black;
+/* #new{
+    height:20vh;
+    border: 2px solid rgb(61, 65, 61);
     box-shadow: 0 4px 8px #05445E;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    font-size: 50px;
+    font-size: 3rem;
     border-radius: 20px;
-    /* width: fit-content; */
-    /* margin: 10%; */
-    background-color: #75E6DA;
-} 
+    width: fit-content;
+    margin: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5vw;
+    background-color: #189AB4;
+    color: ivory;
+}    
 #remove{
     background-color: ivory;
-    height: 600px;
-    padding: 25px;
-   
-   
+    height: 100vh;
 }
 
 
 
- 
-
-
-
-
-
-
-
-
 
  
-
+ */
 
 
 

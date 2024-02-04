@@ -2,7 +2,6 @@
 let finalScorearray = [0,0,0,0,0];
 let finalScore=0;
 let score1=0;
-let score3=0;
 function checkans(inputElement){
 
    let score = 0;
@@ -68,7 +67,6 @@ function submission() {
 function sendDataToServer() {
   let data = {
      score1:`${score1}`,
-     score3:`${score3}`,
       score2: `${finalScore}`
      
   };

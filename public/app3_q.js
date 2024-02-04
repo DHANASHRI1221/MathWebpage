@@ -1,7 +1,7 @@
 let box1, box2, text1, text2;
 let finalScoreArray = [0,0,0,0,0];
 let selected = [-1,-1,-1,-1,-1];
-let score1 = 0, score2 = 0, finalScore=0;
+let score1 = 0, score2 = 0, score3 = 0;
 
 function generateRandomColor() {
     const red = Math.floor(Math.random() * 256);
@@ -103,31 +103,3 @@ function submission() {
    //  console.log(finalScore);
     sendDataToServer();
  }
- 
- function sendDataToServer() {
-    let data = {
-       score1:`${score1}`,
-       score2:`${score2}`,
-        score3: `${finalScore}`
-       
-    };
-    
-    // Make a POST request to the server
-    
-    fetch('http://localhost:3000/leaderboard', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Server response:', data);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    })
-    
-    
-     };
