@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style_lb.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Leaderboard</title>
+</head>
+<body>
+<div class="main">
+    <div class="score">
+        <div class="user_score"  style="font-size: 2rem;">Your Score</div>
+        <div class="number"><p><%=total_score%></p></div>
+    </div>
+    
+    <div class="outer">
+      
+        <img class="image" src="leaderboard.jpg" >
+        <div class="list">
+            <div>Rank</div>
+            <div>Name</div>
+            <div>Score
+                <span class="material-symbols-outlined" style="font-size: 2rem;">
+                    monetization_on
+                    </span>
+            </div>
+
+            <div class="material-symbols-outlined"  style="font-size: 2rem;">social_leaderboard</div>
+            <div><%= topThreeUsers[0].username%></div>
+            <div><%= topThreeUsers[0].score%></div>
+            <div class="material-symbols-outlined"  style="font-size: 2rem;">social_leaderboard</div>
+            <div><%= topThreeUsers[1].username%></div>
+            <div><%= topThreeUsers[1].score%></div>
+            <div class="material-symbols-outlined" style="font-size: 2rem;">social_leaderboard</div>
+            <div><%= topThreeUsers[2].username%></div>
+            <div><%= topThreeUsers[2].score%></div>
+            <!-- <div class="num">
+                <div class="num0">
+                    <p>Rank
+                    </p>
+                    
+                </div>
+                <div class="num1">
+                    <p class="material-symbols-outlined">
+                        social_leaderboard
+                    </p>
+                </div>
+                <div class="num2">
+                    <p class="material-symbols-outlined">
+                        social_leaderboard
+                    </p>
+                </div>
+                <div class="num3">
+                    <p class="material-symbols-outlined">
+                        social_leaderboard
+                    </p>
+                </div>
+            </div>
+            <div class="name">
+                <div class="num0">
+                    <p>Name</p>
+                </div>
+                <div class="num1">
+                    <p>Riya</p>
+                </div>
+                <div class="num2">
+                    <p>Rahul</p>
+                </div>
+                <div class="num3">
+                    <p>Ankit</p>
+                </div>
+            </div>
+            <div class="score">
+                <div class="num0">
+                    <p>Score</p>
+                </div>
+                <div class="num1">
+                    <p>1000</p>
+                </div>
+                <div class="num2">
+                    <p>200</p>
+                </div>
+                <div class="num3">
+                    <p>50</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

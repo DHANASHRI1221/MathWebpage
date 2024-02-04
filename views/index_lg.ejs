@@ -35,7 +35,7 @@
              
               
               <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Name">
+                <input id="input_name"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Name">
               </div> 
 
               <div class="input-group mb-3">
@@ -66,12 +66,14 @@
 
 
             <div class="card-body">
-                <a href="http://localhost:3000/main-page"><button id="login-button" class="btn btn-primary" type="submit" >LOGIN
+              <a href="http://localhost:3000/main-page">
+                <button id="login-button" class="btn btn-primary" type="submit" onclick="login_detail('login-button')" >LOGIN
                     <span class="material-symbols-outlined">
                         login
                         </span>
                 </button>
               </a>
+             
             </div>
             
           </div>

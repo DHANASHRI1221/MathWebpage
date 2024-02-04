@@ -1,60 +1,36 @@
-// function changeColor(button) {
-// //     let button1= document.getElementsByClassName("btn1")[0];
-// //     let button2= document.getElementsByClassName("btn2")[0];
-// //     let button3= document.getElementsByClassName("btn3")[0];
-// //     let button4= document.getElementsByClassName("btn4")[0];
-    
-// //   if(button1){
-// //     button1.style.backgroundColor ="green";
-// //   }
-// //   else if(button2){
-// //     button2.style.backgroundColor ="green";
-// //   }
-// //   else if(button3){
-// //     button3.style.backgroundColor ="green";
-// //   }
-// //   else if(button4){
-// //     button4.style.backgroundColor ="green";
-// //   }
-// button.style.backgroundColor="green";
-// }
+let score1;
+let score2=0;
 function changeColor(clickedButton) {
-    // Get all buttons with the class 'btn'
+   
     let score=0;
     let allButtons = document.querySelectorAll('.btn');
 
-    // Reset the background color for all buttons
     allButtons.forEach(button => {
-        button.style.backgroundColor = ''; // Reset to default (empty string)
+        button.style.backgroundColor = ''; 
     });
 
-    // Set the background color for the clicked button
+    
     clickedButton.style.backgroundColor = 'green';
-    // let selected_button=clickedButton.innerHTML;
-
-
-    // let button=document.getElementsByClassName('btn');
-    // let buttonsArray = Array.from(button);
-    // let minNumber = Math.min(...buttonsArray);
-    // if (parseInt(selected_button) === minNumber) {
-    //     console.log("correct");
-    // }
+    
     let selected_button = parseInt(clickedButton.innerHTML);
 
-    // Extract numeric values of all buttons and find the minimum
+   
     let buttonsArray = Array.from(allButtons).map(button => parseInt(button.innerHTML));
     let minNumber = Math.min(...buttonsArray);
 
     if (selected_button === minNumber) {
-        console.log("correct");
+        // console.log("correct");
         score=10;
+        score1=score;
     }
     else{
-        console.log("incorrect");
+        // console.log("incorrect");
+        score1=0;
     }
-
+   
 
 }
+
 
 function submission() {
     let div1 = document.getElementById('remove');
@@ -65,5 +41,32 @@ function submission() {
     newDiv.id = 'new';
     newDiv.innerHTML = '<p>You have submitted the answer</p>';
     div1.appendChild(newDiv);
+    sendDataToServer();
 }
 
+function sendDataToServer() {
+    let data = {
+        score1: `${score1}`,
+        score2: `${score2}`
+        
+    };
+    
+    // Make a POST request to the server
+    
+    fetch('http://localhost:3000/leaderboard', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Server response:', data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    })
+    
+    
+     };

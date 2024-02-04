@@ -211,7 +211,7 @@ margin-right: 20px;
 #list1 >div{
     margin: auto;
 }
-#list2{
+#list_items{
     justify-content: center;
     align-items: center;
     text-align: center;

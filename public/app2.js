@@ -1,23 +1,9 @@
 
 let finalScorearray = [0,0,0,0,0];
 let finalScore=0;
-
+let score1=0;
 function checkans(inputElement){
-//     let score=0;
-//  let number=document.getElementById('Numbers').innerHTML;
-//  let sum=parseInt(number.split("+")[0]) + parseInt(number.split("+")[1]);
-//  let input=parseInt(document.getElementById('input').value);
-//  if(sum===input){
-//     console.log("correct");
-//    score+=10;
-//  }
-//  else{
-//     console.log("incorrect"); 
-//  }
 
-
-
-  
    let score = 0;
    // console.log(inputElement.value);
    let listItem = inputElement.closest('div');
@@ -74,5 +60,33 @@ function submission() {
    for(let i=0; i<finalScorearray.length; i++){
       finalScore += finalScorearray[i];
    }
-   console.log(finalScore);
+  //  console.log(finalScore);
+   sendDataToServer() 
 }
+
+function sendDataToServer() {
+  let data = {
+     score1:`${score1}`,
+      score2: `${finalScore}`
+     
+  };
+  
+  // Make a POST request to the server
+  
+  fetch('http://localhost:3000/leaderboard', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Server response:', data);
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  })
+  
+  
+   };

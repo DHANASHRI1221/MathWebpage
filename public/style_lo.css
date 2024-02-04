@@ -1,0 +1,42 @@
+*{
+    background-color: ivory;
+}
+.material-symbols-outlined{
+    font-size: xx-large;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+    gap:2.5vw;
+}
+.btn{
+    height: 2.5vw;
+    width:10vw;
+    /* padding: 2vw; */
+   
+    border-radius: 10px;
+    font-size: larger;
+    color: ivory;
+    border: 2px solid black;
+    background-color: green;
+    text-align: center;
+    /* align-items: center;
+    justify-self: center; */
+}
+@media(max-width:769px){
+    .btn{
+        height: 2.5%;
+        width:30%;
+        /* padding: 2vw; */
+        border-radius: 10px;
+        font-size: larger;
+        color: ivory;
+        border: 2px solid black;
+        background-color: green;
+        text-align: center;
+        justify-self: center;
+    }
+}
