@@ -32,9 +32,4 @@ MathFun is an interactive website designed to make math learning enjoyable for c
   - Express.js
   - MySQL
 
-## Getting Started
-
-1. Clone the repository:
-  https://github.com/DHANASHRI1221/Math_Webpage.git
-   ```bash
 
