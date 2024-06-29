@@ -1,4 +1,4 @@
-# MathFun Website
+# Kids Learning Zone - MathFun Website
 
 MathFun is an interactive website designed to make math learning enjoyable for children. It includes fun activities and math problems tailored for different grade levels.
 
